@@ -22,21 +22,22 @@ sobre el conjunto de datos de crecimiento de un girasol (_Helianthus annuus_) ob
 
 ## Estructura del proyecto
 
-plant-growth-analysis/
+PLANTA_CRECIIMIENTO/
 │
-├── README.md
 ├── datos/
-│ └── girasol_motulsky.csv
+│ └── girasol_motulsky.csv # Datos de crecimiento (días vs altura)
+│
+├── reporte/
+│ └── reporte_final.pdf # Informe en PDF con resultados
+│
 ├── src/
-│ ├── utils.py
-│ ├── interpolacion_newton.py
-│ ├── interpolacion_lagrange.py
-│ ├── splines_cubicos.py
-│ ├── regresion_logistica.py
-│ └── comparativa_graficos.py
-└── reporte/
-└── reporte_final.pdf
-
+│ ├── main.py # Script principal (ejecutar este)
+│ ├── utils.py # Carga y visualización de datos
+│ ├── interpolacion_lagrange.py # Interpolación por Lagrange
+│ ├── interpolacion_newton.py # Interpolación de Newton
+│ ├── splines_cubicos.py # Interpolación con Splines cúbicos
+│ ├── regresion_logistica.py # Ajuste con modelo logístico
+│ └── comparativa_graficos.py # Muestra todos los gráficos
 
 - **`datos/girasol_motulsky.csv`**: Archivo CSV con los datos de días (`t`) y altura en cm (`h`).  
 - **`src/utils.py`**: Funciones auxiliares para cargar datos, diferencias divididas y polinomio de Lagrange.  
@@ -51,6 +52,35 @@ plant-growth-analysis/
 
 ## Instrucciones paso a paso para ejecutar el código
 
-1. **Entrar a la carpeta del proyecto**  
-   ```bash
-   cd /ruta/a/plant-growth-analysis
+
+---
+
+## ▶️ ¿Cómo ejecutar el programa?
+
+1. Asegúrate de tener **Python instalado (3.9+ recomendado)**.
+2. Instala las librerías necesarias con:
+
+pip install -r "numpy
+pandas
+matplotlib
+scipy"
+Corre el archivo principal:
+
+bash
+Copiar
+Editar
+python src/main.py
+Esto abrirá automáticamente todos los gráficos comparando métodos de interpolación y la regresión logística.
+
+📈 Métodos aplicados
+Interpolación de Newton
+
+Interpolación de Lagrange
+
+Interpolación con Splines cúbicos
+
+Regresión logística (modelo de crecimiento biológico)
+
+Comparativa gráfica de todos los métodos
+
+
